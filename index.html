@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 3000px;
+      }
+      #scrollTop {
+        width: 65px;
+        height: 65px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        background-color: Thistle;
+        border-radius: 100%;
+        position: fixed;
+        line-height: 1;
+        left: 90%;
+        bottom: 10%;
+      }
+      #scrollTop:hover {
+        background-color: MediumPurple;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>스크롤 탑 이동</h1>
+    <aside id="scrollTop">
+      <br />
+      <img src="./arrow.svg" width="12" />
+      <br />
+      TOP
+    </aside>
+    <script>
+      $("#scrollTop").click(function () {
+        console.log("click");
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+        // html, body 움직임. 0(맨 위)으로, 1초동안
+      });
+    </script>
+  </body>
+</html>
